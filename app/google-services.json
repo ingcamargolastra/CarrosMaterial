@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "8862260598",
+    "firebase_url": "https://carrosmaterial-20ec1.firebaseio.com",
+    "project_id": "carrosmaterial-20ec1",
+    "storage_bucket": "carrosmaterial-20ec1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8862260598:android:475aee67350859db",
+        "android_client_info": {
+          "package_name": "com.edu.unimagdalena.carros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8862260598-2q63tdd6srp6elgpq9r6mijeubh1q41p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edu.unimagdalena.carros",
+            "certificate_hash": "0d14b7d33cb44d62b64a27004e467a73c47bf279"
+          }
+        },
+        {
+          "client_id": "8862260598-jg4tcrrom8ofbosi0gij5mk5kijvap36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQERrRey6-nEX-LnpQHy7ldxEBqt4sxu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8862260598-jg4tcrrom8ofbosi0gij5mk5kijvap36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
