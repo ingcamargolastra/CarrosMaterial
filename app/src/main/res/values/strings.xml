@@ -29,6 +29,7 @@
     <string name="modelo_required">Seleccionae un modelo</string>
     <string name="traccion_required">Seleccione una tracción</string>
     <string name="mensaje">Carro guardado exitosamente.</string>
+    <string name="error_existe">La placa ingresada ya existe en la base de datos</string>
     <string-array name="marcas">
         <item>@string/opt</item>
         <item>@string/mercedez</item>

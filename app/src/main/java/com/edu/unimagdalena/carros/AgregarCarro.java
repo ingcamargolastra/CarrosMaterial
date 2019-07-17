@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -11,6 +12,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -20,10 +25,13 @@ public class AgregarCarro extends AppCompatActivity {
     private EditText placa;
     private Spinner cmbMarca, cmbModelo, cmbTraccion;
     private String marcas[], modelos[], tracciones[];
+    private boolean placaExist;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_carro);
+        placaExist = false;
 
         //inicializamos el array de fotos
         fotos = new ArrayList<>();
@@ -80,7 +88,12 @@ public class AgregarCarro extends AppCompatActivity {
             ((TextView)cmbTraccion.getSelectedView()).setError(getResources().getString(R.string.traccion_required));
             Snackbar.make(v,R.string.traccion_required, Snackbar.LENGTH_SHORT).show();
             return false;
+        }else if (Datos.consultarPlaca(placa.getText().toString())){
+            placa.setError(getResources().getString(R.string.error_existe));
+            placa.requestFocus();
+            return false;
         }
+
         return true;
     }
 
@@ -93,6 +106,11 @@ public class AgregarCarro extends AppCompatActivity {
         cmbMarca.setSelection(0);
         cmbModelo.setSelection(0);
         cmbTraccion.setSelection(0);
+        placa.setError(null);
+        ((TextView)cmbMarca.getSelectedView()).setError(null);
+        ((TextView)cmbModelo.getSelectedView()).setError(null);
+        ((TextView)cmbTraccion.getSelectedView()).setError(null);
+        placaExist = false;
         placa.requestFocus();
     }
 

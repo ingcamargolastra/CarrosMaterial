@@ -1,7 +1,16 @@
 package com.edu.unimagdalena.carros;
 
+import android.util.Log;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -35,4 +44,17 @@ public class Datos {
     public static ArrayList<Carro> obtener(){
         return Datos.carros;
     }
+
+    public static boolean consultarPlaca(String placa){
+        boolean placaEsta = false;
+        for (Carro c:carros) {
+            if (c.getPlaca().equalsIgnoreCase(placa)){
+                placaEsta = true;
+                break;
+            }
+        }
+        return placaEsta;
+    }
+
+
 }
