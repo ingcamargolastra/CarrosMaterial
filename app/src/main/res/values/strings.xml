@@ -5,4 +5,55 @@
     <string name="placa">Placa</string>
     <string name="agregar">Agregar</string>
     <string name="limpiar">Limpiar</string>
+    <string name="mercedez">Mercedez Benz</string>
+    <string name="bmw">BMW</string>
+    <string name="chevrolet">Chevrolet</string>
+    <string name="mazda">Mazda</string>
+    <string name="m2009">2009</string>
+    <string name="m2010">2010</string>
+    <string name="m2011">2011</string>
+    <string name="m2012">2012</string>
+    <string name="m2013">2013</string>
+    <string name="m2014">2014</string>
+    <string name="m2015">2015</string>
+    <string name="m2016">2016</string>
+    <string name="m2017">2017</string>
+    <string name="m2018">2018</string>
+    <string name="m2019">2019</string>
+    <string name="t4x2">Tracción 4x2</string>
+    <string name="t4x4">Tracción 4x4</string>
+    <string name="tninguna">Sin Tracción</string>
+    <string name="opt">-- Seleccione una opcion --</string>
+    <string name="error_required">Debe ingresar la placa del carro</string>
+    <string name="marca_required">Seleccionae una marca</string>
+    <string name="modelo_required">Seleccionae un modelo</string>
+    <string name="traccion_required">Seleccione una tracción</string>
+    <string-array name="marcas">
+        <item>@string/opt</item>
+        <item>@string/mercedez</item>
+        <item>@string/bmw</item>
+        <item>@string/chevrolet</item>
+        <item>@string/mazda</item>
+    </string-array>
+    <string-array name="modelos">
+        <item>@string/opt</item>
+        <item>@string/m2009</item>
+        <item>@string/m2010</item>
+        <item>@string/m2011</item>
+        <item>@string/m2012</item>
+        <item>@string/m2013</item>
+        <item>@string/m2014</item>
+        <item>@string/m2015</item>
+        <item>@string/m2016</item>
+        <item>@string/m2017</item>
+        <item>@string/m2018</item>
+        <item>@string/m2019</item>
+    </string-array>
+    <string-array name="tracciones">
+        <item>@string/opt</item>
+        <item>@string/t4x2</item>
+        <item>@string/t4x4</item>
+        <item>@string/tninguna</item>
+    </string-array>
 </resources>
+
