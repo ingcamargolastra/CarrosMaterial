@@ -56,7 +56,10 @@ public class AgregarCarro extends AppCompatActivity {
 
     public void guardar(View v){
         if(validar(v)){
-            Snackbar.make(v,"Todo bien", Snackbar.LENGTH_SHORT).show();
+            Carro c = new Carro(Datos.getId(), this.fotoXmarca(cmbMarca.getSelectedItemPosition()),placa.getText().toString(),cmbMarca.getSelectedItem().toString(),cmbModelo.getSelectedItem().toString(), cmbTraccion.getSelectedItem().toString());
+            c.guardar();
+            limpiar();
+            Snackbar.make(v,R.string.mensaje, Snackbar.LENGTH_SHORT).show();
         }
     }
 

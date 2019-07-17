@@ -28,6 +28,7 @@
     <string name="marca_required">Seleccionae una marca</string>
     <string name="modelo_required">Seleccionae un modelo</string>
     <string name="traccion_required">Seleccione una tracción</string>
+    <string name="mensaje">Carro guardado exitosamente.</string>
     <string-array name="marcas">
         <item>@string/opt</item>
         <item>@string/mercedez</item>
