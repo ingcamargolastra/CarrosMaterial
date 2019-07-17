@@ -6,16 +6,18 @@ class Carro {
     private String placa;
     private String marca;
     private String modelo;
+    private String traccion;
 
     public Carro() {
     }
 
-    public Carro(String id, int foto, String placa, String marca, String modelo) {
+    public Carro(String id, int foto, String placa, String marca, String modelo, String traccion) {
         this.id = id;
         this.foto = foto;
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
+        this.traccion = traccion;
     }
 
     public String getId() {
@@ -38,6 +40,10 @@ class Carro {
         return modelo;
     }
 
+    public String getTraccion(){
+        return traccion;
+    }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -56,6 +62,10 @@ class Carro {
 
     public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public void setTraccion(String traccion){
+        this.traccion = traccion;
     }
 
     public void guardar(){
