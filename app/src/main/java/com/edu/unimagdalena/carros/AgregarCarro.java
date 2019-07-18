@@ -76,6 +76,14 @@ public class AgregarCarro extends AppCompatActivity {
             placa.setError(getResources().getString(R.string.error_required));
             placa.requestFocus();
             return false;
+        }else if (placa.getText().toString().length() != 6){
+            placa.setError(getResources().getString(R.string.error_tamanio_placa));
+            placa.selectAll();
+            return false;
+        }else if (Datos.consultarPlaca(placa.getText().toString())){
+            placa.setError(getResources().getString(R.string.error_existe));
+            placa.requestFocus();
+            return false;
         }else if(cmbMarca.getSelectedItemPosition() == 0){
             ((TextView)cmbMarca.getSelectedView()).setError(getResources().getString(R.string.marca_required));
             Snackbar.make(v,R.string.marca_required, Snackbar.LENGTH_SHORT).show();
@@ -87,10 +95,6 @@ public class AgregarCarro extends AppCompatActivity {
         }else if(cmbTraccion.getSelectedItemPosition() == 0){
             ((TextView)cmbTraccion.getSelectedView()).setError(getResources().getString(R.string.traccion_required));
             Snackbar.make(v,R.string.traccion_required, Snackbar.LENGTH_SHORT).show();
-            return false;
-        }else if (Datos.consultarPlaca(placa.getText().toString())){
-            placa.setError(getResources().getString(R.string.error_existe));
-            placa.requestFocus();
             return false;
         }
 
